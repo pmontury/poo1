@@ -50,7 +50,8 @@
       $voiture2 = new Formule1('MacLaren', 'F512', 'Rouge et Blanche', 750);
       $voiture2->setVitesse(750);
       debug($voiture2);
-
+      Log::logWrite('Bonjour');
+      $voiture1->connexionBDD();
    ?>
    </div>
 
