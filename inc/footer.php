@@ -1,7 +1,7 @@
 <!-- Fin corps -->
       <footer>
          <div class="wrap position">
-            <p>&copy; <?= date('Y'); ?> Programmation Orientée Objet 1 </p>
+            <p>&copy; <?= date('Y'); ?> PHP - Programmation Orientée Objet 2 </p>
          </div>
       </footer>
       <!-- Pour le javascript  -->
