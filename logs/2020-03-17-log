@@ -1,2 +1,125 @@
 08:56:40-Bonjour\r\n08:56:44-Erreur de connexion : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
-\r\n
+\r\n11:40:22-Bonjour
+11:40:26-Erreur de connexion : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+
+11:40:38-Bonjour
+11:40:43-Erreur de connexion : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+
+11:40:58-Bonjour
+11:41:02-Erreur de connexion : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+
+17:16:42-Erreur de connexion : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+
+17:16:42-Bonjour
+17:16:46-Erreur de connexion : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+
+17:17:47-Erreur de connexion : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+
+17:17:47-Bonjour
+17:17:51-Erreur de connexion : SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+
+17:19:47-Erreur de connexion : SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+17:19:47-Bonjour
+17:19:47-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:24:44-Bonjour
+17:24:44-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:31:52-Bonjour
+17:31:52-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:37:56-Bonjour
+17:37:56-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:43:05-Bonjour
+17:43:05-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:43:42-Bonjour
+17:43:42-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:44:29-Bonjour
+17:44:29-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:51:25-Bonjour
+17:51:25-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:54:16-Bonjour
+17:54:16-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:55:02-Bonjour
+17:55:02-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:56:30-Bonjour
+17:56:30-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+17:59:19-Bonjour
+17:59:19-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:05:03-Bonjour
+18:05:03-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:06:57-Bonjour
+18:06:57-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:07:18-Bonjour
+18:07:18-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:07:35-Bonjour
+18:07:35-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:08:32-Bonjour
+18:08:32-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:14:16-Bonjour
+18:14:16-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:15:55-Bonjour
+18:15:55-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:17:01-Bonjour
+18:17:01-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:18:51-Bonjour
+18:18:51-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:21:11-Bonjour
+18:21:11-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:21:22-Bonjour
+18:21:22-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:22:16-Bonjour
+18:22:16-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:30:59-Bonjour
+18:30:59-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:32:37-Bonjour
+18:32:37-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:35:25-Bonjour
+18:35:25-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:45:48-Bonjour
+18:45:48-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:46:24-Bonjour
+18:46:24-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:47:43-Bonjour
+18:47:43-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:49:31-Bonjour
+18:49:31-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:55:22-Bonjour
+18:55:22-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+18:55:43-Bonjour
+18:55:43-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:04:52-Bonjour
+19:04:52-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:08:02-Bonjour
+19:08:02-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:08:53-Bonjour
+19:08:53-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:09:31-Bonjour
+19:09:31-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:11:31-Bonjour
+19:11:32-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:11:41-Bonjour
+19:11:41-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:13:16-Bonjour
+19:13:16-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:15:25-Bonjour
+19:15:25-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:16:44-Bonjour
+19:16:44-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:18:33-Bonjour
+19:18:33-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:18:46-Bonjour
+19:18:46-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:19:11-Bonjour
+19:19:11-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:19:59-Bonjour
+19:19:59-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:20:08-Bonjour
+19:20:08-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:20:21-Bonjour
+19:20:21-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:21:04-Bonjour
+19:21:04-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:21:53-Bonjour
+19:21:53-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:22:21-Bonjour
+19:22:21-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'
+19:22:53-Bonjour
+19:22:53-Erreur de connexion : SQLSTATE[HY000] [1049] Unknown database 'connexion'

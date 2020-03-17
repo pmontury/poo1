@@ -10,6 +10,14 @@
 
 // Instanciation
    $voiture1 = new Voiture('Lada', 'Niva', 'moche', 1000);
+   $reqSQL = new RequeteSQL();
+   $table = 't_legumes';
+   $data = array('nom'           => 'navet',
+                 'description'   => 'description navet',
+                 'photo'         => 'photo.jpg',
+                 'created_at'    => date('Y-m-d H:i:s')
+                );
+   $reqSQL->insertInto($table, $data);
 
    include('inc/html.php');
    include('inc/header.php');
