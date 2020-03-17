@@ -2,18 +2,18 @@
    abstract class Vehicule
    {
       // les propriétés
-      protected string $marque;
-      protected string $modele;
-      protected string $couleur;
-      protected float $masse;
-      protected float $vitesse = 0;
+      protected string  $marque;
+      protected string  $modele;
+      protected string  $couleur;
+      protected float   $masse;
+      protected float   $vitesse = 0;
 
    // Constructors pour les paramètres que l'on passe à l'objet à l'instanciation
       public function __construct(string $brand, string $model, string $color, float $weigth)
-      {  $this->marque = $brand;
-         $this->modele = $model;
+      {  $this->marque  = $brand;
+         $this->modele  = $model;
          $this->couleur = $color;
-         $this->masse = $weigth;
+         $this->masse   = $weigth;
       }
 
    // getter
