@@ -120,4 +120,21 @@ class Validations
       }
    }
 
+   function verifSelect($value, $key, $obligatoire = true)
+   {  if (empty($value) AND $obligatoire)
+      {  $this->errors[$key] = 'Veuillez choisir une option';
+      }
+   }
+
+   function verifMail($value, $key, $obligatoire = true)
+   {  if (empty($value))
+      {  if ($obligatoire)
+         {  $this->errors[$key] = 'Veuillez renseigner l\'adresse mail';
+         }
+      }
+      elseif (!filter_var($value, FILTER_VALIDATE_EMAIL))
+      {  $this->errors[$key] = 'Adresse mail invalide';
+      }
+   }
+
 } // class Validation

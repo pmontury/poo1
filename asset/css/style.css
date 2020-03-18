@@ -21,7 +21,10 @@ h1 { font-size: 1.5em; margin: 20px 0; text-decoration: underline; }
 label { display: inline-block; width: 25%; font-weight: bold; }
 label span { color:red; }
 .labelText { vertical-align: top; }
-input { font-size: 1em; width: 74%; }
+input { font-family: Roboto; font-size: 1em; width: 74%; }
+select { font-family: Roboto; font-size: 1em; }
+textarea { font-family: Roboto; font-size: 1em; width: 74%; }
+input[type=text] { font-family: Roboto; }
 input[type=submit] { width: 30%; }
 
 footer { background-color: #AED2E8; }

@@ -8,7 +8,7 @@ abstract class Formulaire
    protected string  $enctype = '';
    protected string  $class   = '';
    protected string  $id;
-   protected array   $inputs;
+   public array   $inputs;
 
    // Constructors pour les paramètres que l'on passe à l'objet à l'instanciation
    public function __construct(string $iniFile)

@@ -14,9 +14,13 @@
    if ($formInfos->getRequestValue('submitted'))
    {  $nom = $formInfos->getRequestValue('nom');
       $prenom = $formInfos->getRequestValue('prenom');
+      $couleur = $formInfos->getRequestValue('couleur');
+      $message = $formInfos->getRequestValue('message');
 
       $formInfos->validations->verifText($nom, 'nom', 3, 100);
-      $formInfos->validations->verifText($prenom, 'prenom', 3, 1000);
+      $formInfos->validations->verifText($prenom, 'prenom', 3, 100);
+      $formInfos->validations->verifSelect($couleur, 'couleur');
+      $formInfos->validations->verifText($message, 'message', 10, 1000);
 
       if (!$formInfos->validations->hasError())
       {  echo 'ça marche';
