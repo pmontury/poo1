@@ -9,58 +9,27 @@
    $pageTitle = 'PHP - Programmation Orientée Objet 2';
 
 // Instanciation
-   $voiture1 = new Voiture('Lada', 'Niva', 'moche', 1000);
-   $reqSQL = new RequeteSQL();
-   $table = 't_legumes';
-   $data = array('nom'           => 'navet',
-                 'description'   => 'description navet',
-                 'photo'         => 'photo.jpg',
-                 'created_at'    => date('Y-m-d H:i:s')
-                );
-   $reqSQL->insertInto($table, $data);
+   $formInfos = new FormTest('conf.ini');
+
+   if ($formInfos->getRequestValue('submitted'))
+   {  $nom = $formInfos->getRequestValue('nom');
+      $prenom = $formInfos->getRequestValue('prenom');
+
+      $formInfos->validations->verifText($nom, 'nom', 3, 100);
+      $formInfos->validations->verifText($prenom, 'prenom', 3, 1000);
+
+      if (!$formInfos->validations->hasError())
+      {  echo 'ça marche';
+      }
+   }
 
    include('inc/html.php');
    include('inc/header.php');
 ?>
    <div class="wrap" id="content">
-   <?php
-      echo 'Après l\'instanciation';
-      debug($voiture1);
-      br();
-
-      $voiture1->setCouleur('pas belle');
-      echo 'Après le changement de couleur';
-      debug($voiture1);
-      br();
-
-      $voiture1->changerVitesse(-10);
-      echo 'Après le changement de vitesse';
-      debug($voiture1);
-      br();
-
-
-      $voiture1->setMarque('Peugeot');
-      echo 'Après le setter de la marque : ' . $voiture1->getMarque();
-      br();
-      $voiture1->setModele('403');
-      echo 'Après le setter du modéle : ' . $voiture1->getModele();
-      br();
-      $voiture1->setCouleur('Violet');
-      echo 'Après le setter de la couleur : ' . $voiture1->getCouleur();
-      br();
-      $voiture1->setMasse(1234);
-      echo 'Après le setter de la masse : ' . $voiture1->getMasse();
-      br();
-      $voiture1->setVitesse(45);
-      echo 'Après le setter de la vitesse : ' . $voiture1->getVitesse();
-      br();
-
-      $voiture2 = new Formule1('MacLaren', 'F512', 'Rouge et Blanche', 750);
-      $voiture2->setVitesse(750);
-      debug($voiture2);
-      Log::logWrite('Bonjour');
-      $voiture1->connexionBDD();
-   ?>
+<?php
+      $formInfos->buildForm();
+?>
    </div>
 
 <?php

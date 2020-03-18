@@ -36,14 +36,8 @@
       }
 
       public function insertInto(string $table, array $datas)
-      {  $colonnes = '(id';
-         $valeurs = '(NULL';
-         foreach ($datas as $key => $value)
-         {  $colonnes .= ', ' . $key;
-            $valeurs .= ", :" . $key;
-         }
-         $colonnes .= ')';
-         $valeurs .= ')';
+      {  $colonnes = '(' . implode(', ', array_keys($datas)) . ')';
+         $valeurs = '(:' . implode(', :', array_keys($datas)) . ')';
 
          $sql = 'INSERT INTO ' . $table . ' ' . $colonnes . ' VALUES ' . $valeurs;
          $query = $this->pdo->prepare($sql);
