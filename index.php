@@ -9,20 +9,27 @@
    $pageTitle = 'PHP - Programmation Orientée Objet 2';
 
 // Instanciation
-   $formInfos = new FormTest('conf.ini');
+   $form = new Formulaire('./conf/conf.ini', 'index.php', 'multipart/form-data');
 
-   if ($formInfos->getRequestValue('submitted'))
-   {  $nom = $formInfos->getRequestValue('nom');
-      $prenom = $formInfos->getRequestValue('prenom');
-      $couleur = $formInfos->getRequestValue('couleur');
-      $message = $formInfos->getRequestValue('message');
+   if ($form->getRequestValue('submitted'))
+   {  $nom = $form->getRequestValue('nom');
+      $prenom = $form->getRequestValue('prenom');
+      $couleur = $form->getRequestValue('couleur');
+      $message = $form->getRequestValue('message');
+      $password = $form->getRequestValue('password');
 
-      $formInfos->validations->verifText($nom, 'nom', 3, 100);
-      $formInfos->validations->verifText($prenom, 'prenom', 3, 100);
-      $formInfos->validations->verifSelect($couleur, 'couleur');
-      $formInfos->validations->verifText($message, 'message', 10, 1000);
+      $form->verifText($nom, 'nom', 3, 100);
+      $form->verifText($prenom, 'prenom', 3, 100);
+      $form->verifSelect($couleur, 'couleur');
+      $form->verifText($message, 'message', 10, 1000);
+      if (empty($password))
+      {  $form->setError('password', 'Veuillez saisir votre mot de passe');
+      }
 
-      if (!$formInfos->validations->hasError())
+      $validFile = $form->verifFile('photo');
+      $nameOriginal = $validFile['nameOriginal'];
+      $ext = $validFile['ext'];
+      if (!$form->hasError())
       {  echo 'ça marche';
       }
    }
@@ -31,8 +38,9 @@
    include('inc/header.php');
 ?>
    <div class="wrap" id="content">
+      <h1>Formulaire et contrôles en mode objet</h1>
 <?php
-      $formInfos->buildForm();
+      $form->addForm();
 ?>
    </div>
 

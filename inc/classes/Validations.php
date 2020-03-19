@@ -1,6 +1,6 @@
 <?php
 
-class Validations
+trait Validations
 {
    private $errors = array();
 
