@@ -2,7 +2,8 @@
 
 trait Validations
 {
-   private $errors = array();
+   private array  $errors    = array();
+   public  array  $validFile = array();
 
    public function hasError()
    {  return ((count($this->errors)) ? true : false);
@@ -80,14 +81,11 @@ trait Validations
             }
          }
       }
-      $data = array(
-        'ext'           => $ext,
-        'nameOriginal'  => $nameOriginal
-      );
-      return $data;
+      $this->validFile['ext'] = $ext;
+      $this->validFile['nameOriginal'] = $nameOriginal;
    }
 
-   function verifCodePostal($codepostal, $key, $obligatoire = true)
+   public function verifCodePostal($codepostal, $key, $obligatoire = true)
    {  $pattern = '/^(([0-8][0-9])|(9[0-5])|(9[7-8]))[0-9]{3}$/';
       if (empty($codepostal))
       {  if ($obligatoire)
@@ -99,7 +97,7 @@ trait Validations
       }
    }
 
-   function verifInt($value, $key, $min, $max, $obligatoire = true)
+   public function verifInt($value, $key, $min, $max, $obligatoire = true)
    {  if (filter_var($value, FILTER_VALIDATE_INT) === 0 OR filter_var($value, FILTER_VALIDATE_INT))
       {  if ($value < $min)
          {  $this->errors[$key] = 'Le champ ' . $key . ' doit être supérieur à ' . $min;
@@ -120,13 +118,19 @@ trait Validations
       }
    }
 
-   function verifSelect($value, $key, $obligatoire = true)
+   public function verifSelect($value, $key, $obligatoire = true)
    {  if (empty($value) AND $obligatoire)
       {  $this->errors[$key] = 'Veuillez choisir une option';
       }
    }
 
-   function verifMail($value, $key, $obligatoire = true)
+   public function verifPassword($value, $key)
+   {  if (empty($value))
+      {  $this->errors[$key] = 'Veuillez saisir votre mot de passe';
+      }
+   }
+
+   public function verifMail($value, $key, $obligatoire = true)
    {  if (empty($value))
       {  if ($obligatoire)
          {  $this->errors[$key] = 'Veuillez renseigner l\'adresse mail';
