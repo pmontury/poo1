@@ -22,17 +22,19 @@ class Formulaire
       $this->id = $formId;
    }
 
-   function getRequestValue($key)
+   public function getRequestValue($key)
    {  if (isset($_REQUEST[$key]) OR !empty($_REQUEST[$key]))
          return htmlspecialchars(stripslashes(trim($_REQUEST[$key])));
       else
          return false;
    }
 
-   private function addLabel(array $label)
-   {  $name = ((!empty($label['name'])) ? $label['name'] : '');
+   private function addLabel(array $input)
+   {  $label = $input['label'];
+      $validation = $input['validation'];
+      $name = ((!empty($label['name'])) ? $label['name'] : '');
       $texte = ((!empty($label['texte'])) ? $label['texte'] : '');
-      if(!empty($texte) AND !empty($label['obligatoire']) AND $label['obligatoire'])
+      if(!empty($texte) AND !empty($validation['obligatoire']) AND $validation['obligatoire'])
       {  $texte .= '<span>*</span>';
       }
       $class = ((!empty($label['class'])) ? $label['class'] : '');
@@ -89,12 +91,12 @@ class Formulaire
 <?php
    }
 
-   function addForm()
+   public function addForm()
    {  ?>
       <form class="<?= $this->class ?>" action="<?= $this->action ?>" id="<?= $this->id ?>" method="<?= $this->method ?>" enctype="<?= $this->enctype ?>">
 <?php foreach ($this->inputs as $input) :
          if (array_key_exists('label', $input))
-         {  $this->addLabel($input['label']);
+         {  $this->addLabel($input);
          }
          switch($input['input']['type'])
          {  case 'text' :
@@ -113,10 +115,28 @@ class Formulaire
                break;
             default :
                die('Erreur input type non supporté');
+               break;
          }
       endforeach; ?>
       </form>
 <?php
    }
+
+   public function validForm()
+   {  foreach ($inputs as $input)
+      {  $key = $input['input']['name'];
+         $verifProc  = $input['validation']['proc'];
+         $value = $this->getRequestValue($key);
+         switch ($verifProc)
+         {  case 'text':
+               $this->verifText($value, $key, $input['validation']['minsize'], $input['validation']['maxsize']);
+               break;
+            default:
+               die('Erreur input type non supporté');
+               break;
+         }
+      }
+   }
+
 
 }  // class Formulaire
